@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCCM quiz questions | By CSS SCIM Team</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="title-card">
+        <div class="celebration-icons left">🎉</div>
+        <div class="celebration-icons right">🏆</div>
+        <span class="badge">Quiz Portal</span>
+        <h1>SCCM quiz questions | By CSS SCIM Team</h1>
+        <p>
+          Choose a level, submit it, then select a topic and answer the quiz.
+          Each correct answer earns 1 point.
+        </p>
+      </div>
+
+      <!-- Level Selection -->
+      <section id="level-section" class="content-card">
+        <div class="section-header">
+          <div>
+            <h2>Select a Category</h2>
+            <p>Choose one category and click <strong>Submit Category</strong>.</p>
+          </div>
+          <span class="step-badge">Step 1 of 3</span>
+        </div>
+
+        <div class="card-grid">
+          <button class="select-card" data-level="Level 100">
+            <h3>Level 100</h3>
+            <p>Topics: OSD, SRV, SUM, APP, CLD</p>
+          </button>
+
+          <button class="select-card" data-level="Level 200">
+            <h3>Level 200</h3>
+            <p>Topics: OSD, SRV, SUM, APP, CLD</p>
+          </button>
+        </div>
+
+        <div class="action-row center">
+          <button id="submit-level-btn" class="main-btn" disabled>Submit Category</button>
+        </div>
+      </section>
+
+      <!-- Topic Selection -->
+      <section id="topic-section" class="content-card hidden">
+        <div class="section-header">
+          <div>
+            <h2>Choose a Topic</h2>
+            <p id="selected-level-text"></p>
+          </div>
+          <span class="step-badge">Step 2 of 3</span>
+        </div>
+
+        <div id="topic-container" class="card-grid"></div>
+
+        <div class="action-row">
+          <button id="back-to-level-btn" class="secondary-btn">Back</button>
+          <button id="submit-topic-btn" class="main-btn" disabled>Submit Topic</button>
+        </div>
+      </section>
+
+      <!-- Quiz Section -->
+      <section id="quiz-section" class="content-card hidden">
+        <div class="section-header">
+          <div>
+            <h2 id="quiz-title">Topic Quiz</h2>
+            <p id="quiz-meta"></p>
+          </div>
+          <span class="step-badge">Step 3 of 3</span>
+        </div>
+
+        <div class="quiz-box">
+          <p id="question-text" class="question-text"></p>
+
+          <form id="quiz-form">
+            <div id="options-container" class="options-list"></div>
+          </form>
+
+          <div class="action-row">
+            <button id="change-topic-btn" class="secondary-btn">Change Topic</button>
+            <button id="submit-answer-btn" class="main-btn" disabled>Submit Answer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Result Section -->
+      <section id="result-section" class="content-card hidden">
+        <div class="result-box">
+          <div id="result-icon" class="result-icon">🎯</div>
+          <h2 id="result-title">Result</h2>
+          <p id="result-message"></p>
+
+          <div class="score-card">
+            <h3>Final Score</h3>
+            <div id="score-value" class="score-value">0 / 1</div>
+            <p>Each correct answer gives 1 point.</p>
+          </div>
+
+          <div class="action-row center">
+            <button id="choose-another-topic-btn" class="secondary-btn">Choose Another Topic</button>
+            <button id="start-again-btn" class="main-btn">Start Again</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
